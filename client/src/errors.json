@@ -1,0 +1,20 @@
+{
+    "result": 
+    {
+        "iss": "https://accounts.google.com",
+        "azp": "181490117566-3vu9jues4a17i33ffuiub3boq0dfm2rg.apps.googleusercontent.com",
+        "aud": "181490117566-3vu9jues4a17i33ffuiub3boq0dfm2rg.apps.googleusercontent.com",
+        "sub": "110640311210642900512",
+        "email": "bangkartavya@gmail.com",
+        "email_verified": true,
+        "nbf": 1730226895,
+        "name": "Kartavya Bang",
+        "picture": "https://lh3.googleusercontent.com/a/ACg8ocJQJuqmD78QYr1O-NGOtWprKlaY0w19daew60dmTSQcOajVjBo=s96-c",
+        "given_name": "Kartavya",
+        "family_name": "Bang",
+        "iat": 1730227195,
+        "exp": 1730230795,
+        "jti": "56b59e19f5cc8ce0517b66856299e01fa7a8f634"
+    },
+    "token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImM4OGQ4MDlmNGRiOTQzZGY1M2RhN2FjY2ZkNDc3NjRkMDViYTM5MWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxODE0OTAxMTc1NjYtM3Z1OWp1ZXM0YTE3aTMzZmZ1aXViM2JvcTBkZm0ycmcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxODE0OTAxMTc1NjYtM3Z1OWp1ZXM0YTE3aTMzZmZ1aXViM2JvcTBkZm0ycmcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTA2NDAzMTEyMTA2NDI5MDA1MTIiLCJlbWFpbCI6ImJhbmdrYXJ0YXZ5YUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmJmIjoxNzMwMjI2ODk1LCJuYW1lIjoiS2FydGF2eWEgQmFuZyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NKUUp1cW1ENzhRWXIxTy1OR090V3ByS2xhWTB3MTlkYWV3NjBkbVRTUWNPYWpWakJvPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkthcnRhdnlhIiwiZmFtaWx5X25hbWUiOiJCYW5nIiwiaWF0IjoxNzMwMjI3MTk1LCJleHAiOjE3MzAyMzA3OTUsImp0aSI6IjU2YjU5ZTE5ZjVjYzhjZTA1MTdiNjY4NTYyOTllMDFmYTdhOGY2MzQifQ.OvB2etsMxgo_d13CXMxsRd4M33BmIH_JMeWBIyG8YiNUtT4d-uf8ke6-ycgMdpkNPOkDhdX-MqaQNNQAfUZ9LdQsq0F4tgSx_WpEsyt-cOZWvyoIpO25kkBOvBRXyG2ls5p0Ko_tM_BNthj-IB2WaVsU1_RUuYRKdfzkMmaHRg2LS_yose1tRM1Ih31urWY4lSm502dmrlHXULpoi1q1JkBQpb-wZVJUYdaYbHb3w8FQLQLK93B0H9AKmDJgMKF8fufVFzy1DsHQqMuZUQU8wFvfZHHwivvouhMq6oaHydJWiZOeefPKXbAmBkgmlJc4LTbdwDU5uw8w7m0MDOUGnQ"
+}

@@ -1,41 +1,26 @@
-import { AppBar, Container, Grid, Grow, Typography } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
-import Posts from './components/Posts/Posts';
-import Form from './components/Form/Form.js';
-import memories from './images/memories.png';
-import { useDispatch } from 'react-redux';
-import useStyles from './styles.js';
-import { getPosts } from './actions/posts.js';
-const App =
-  () => {
-    const [currentId, setCurrentId] = useState(0);
-    const classes = useStyles();
-    const dispatch = useDispatch();
+import { Container } from "@material-ui/core";
+import React from "react";
+import Navbar from "./components/Navbar/Navbar.js";
+import Home from "./components/Home/Home.js";
+import Auth from "./components/Auth/Auth.js";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
-    useEffect(() => {
-      dispatch(getPosts());
-    }, [currentId,dispatch]);
-    return (
-      <Container maxwidth="lg">
-        <AppBar className={classes.appBar} position="static" color="inherit">
-          <Typography className={classes.heading} variant="h2" align="center">
-            Memories
-          </Typography>
-          <img className={classes.image} src={memories} alt="memeories" height="60" />
-        </AppBar>
-        <Grow in>
-          <Container>
-            <Grid container className= {classes.mainContainer} jusitfy='space-between' alignitems='stretch' spacing={3}>
-              <Grid item xs={12} sm={7}>
-                <Posts setCurrentId={setCurrentId} />
-              </Grid>
-              <Grid item xs={12} sm={4}>
-                <Form currentId={currentId} setCurrentId={setCurrentId} />
-              </Grid>
-            </Grid>
+const App = () => {
+  const CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID || "181490117566-3vu9jues4a17i33ffuiub3boq0dfm2rg.apps.googleusercontent.com" ;
+  return (
+    <GoogleOAuthProvider clientId={CLIENT_ID}>
+        <BrowserRouter>
+          <Container maxwidth="lg">
+            <Navbar />
+            <Routes>
+              <Route path="/" exact element={<Home/>} />
+              <Route path="/auth" exact element={<Auth/>} />
+            </Routes>
           </Container>
-        </Grow>
-      </Container>);
+      </BrowserRouter>
+    </GoogleOAuthProvider>
+    );
   }
 
 export default App
