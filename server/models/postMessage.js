@@ -11,6 +11,6 @@ const postSchema = mongoose.Schema({
   createdAt : {type : Date, default : new Date()}
 });
 
-let PostMessage = mongoose.model("PostMessage", postSchema);
+const PostMessage = mongoose.model("PostMessage", postSchema);
 
 export default PostMessage;

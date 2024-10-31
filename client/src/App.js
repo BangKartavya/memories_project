@@ -3,19 +3,24 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar.js";
 import Home from "./components/Home/Home.js";
 import Auth from "./components/Auth/Auth.js";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import PostDetails  from './components/PostDetails/PostDetails.jsx';
 
 const App = () => {
   const CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID || "181490117566-3vu9jues4a17i33ffuiub3boq0dfm2rg.apps.googleusercontent.com" ;
+
   return (
     <GoogleOAuthProvider clientId={CLIENT_ID}>
         <BrowserRouter>
-          <Container maxwidth="lg">
+          <Container maxWidth="xl">
             <Navbar />
             <Routes>
-              <Route path="/" exact element={<Home/>} />
-              <Route path="/auth" exact element={<Auth/>} />
+              <Route path="/" element={<Navigate replace to="/posts"/>}/>
+              <Route path="/posts" element={<Home/>} />
+              <Route path="/posts/search" element={<Home/>} />
+              <Route path="/posts/:id" element={<PostDetails/>} />
+            <Route path="/auth" element={<Auth />} />
             </Routes>
           </Container>
       </BrowserRouter>

@@ -1,7 +1,8 @@
 import React, {useState,useEffect} from 'react';
 import { AppBar, Avatar, Toolbar, Typography,Button } from "@material-ui/core";
 import useStyles from './styles';
-import memories from '../../images/memories.png';
+import memoriesLogo from '../../images/memoriesLogo.png';
+import memoriesText from '../../images/memoriesText.png';
 import { jwtDecode } from 'jwt-decode';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -17,7 +18,6 @@ const Navbar = () => {
 
     const logout = (e) => {
         dispatch({ type: LOGOUT });
-        alert("Logged Out");
         navigate('/');
         setUser(null);
     }
@@ -35,12 +35,10 @@ const Navbar = () => {
     
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
-            <div className={classes.brandContainer}>
-                <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">
-                    Memories
-                </Typography>
-                <img className={classes.image} src={memories} alt="memeories" height="60" />
-            </div>
+            <Link to ="/" className={classes.brandContainer}>
+                <img className = {classes.image} src={memoriesText} alt = "memoriesText" height = "45px"/>
+                <img className={classes.image} src={memoriesLogo} alt="memoriesLog" height="40px" />
+            </Link>
             <Toolbar className={classes.toolbar}>
                 {user ? (
                     <div className={classes.profile}>
