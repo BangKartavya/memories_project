@@ -78,7 +78,7 @@ export const deletePost = async (req, res, next) => {
   res.json({ message: "Post deleted successfully" });
 };
 
-export const likePost = async (req, res) => {
+export const likePost = async (req, res, next) => {
   const { id } = req.params;
   if (!req.userId) return res.json({ message: "Unauthenticated" });
   if (!mongoose.Types.ObjectId.isValid(id)) return res.send(404).send("No post with that ID");
@@ -99,3 +99,16 @@ export const likePost = async (req, res) => {
   res.json(updatedPost);
   
 };
+
+export const commentPost = async (req, res, next) => {
+  const { id } = req.params;
+  const { value } = req.body;
+
+  const post = await PostMessage.findById(id);
+
+  post.comments.push(value);
+  
+  const updatedPost = await PostMessage.findByIdAndUpdate(id, post, { new: true });
+
+  res.json(updatedPost);
+}
