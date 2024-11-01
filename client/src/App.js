@@ -8,7 +8,8 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import PostDetails  from './components/PostDetails/PostDetails.jsx';
 
 const App = () => {
-  const CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID ;
+  const CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+  console.log(CLIENT_ID);
 
   return (
     <GoogleOAuthProvider clientId={CLIENT_ID}>
